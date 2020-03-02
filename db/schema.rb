@@ -10,7 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200302070826) do
+ActiveRecord::Schema.define(version: 20200302080751) do
+
+  create_table "blogs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title",      default: "", null: false
+    t.string   "text",       default: "", null: false
+    t.string   "googlemap"
+    t.string   "instagram"
+    t.integer  "user_id",                 null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.index ["title"], name: "index_blogs_on_title", using: :btree
+    t.index ["user_id"], name: "index_blogs_on_user_id", using: :btree
+  end
+
+  create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title",      default: "", null: false
+    t.string   "text",       default: "", null: false
+    t.string   "googlemap"
+    t.string   "instagram"
+    t.integer  "user_id",                 null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.index ["title"], name: "index_events_on_title", using: :btree
+    t.index ["user_id"], name: "index_events_on_user_id", using: :btree
+  end
+
+  create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title",      default: "", null: false
+    t.string   "instagram"
+    t.integer  "user_id",                 null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.index ["title"], name: "index_items_on_title", using: :btree
+    t.index ["user_id"], name: "index_items_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
