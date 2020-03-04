@@ -1,0 +1,38 @@
+<div id="contents">
+
+<div id="main">
+
+<section>
+
+<h2 class="title">Blog<span>ブログ</span></h2>
+
+<table class="ta1">
+<caption><a href="#">table</a>冒頭の見出しにはcaptionタグを使ってください。</caption>
+<% @blogs.each do |blog| %>
+<tr>
+<th><%= blog.title %></th>
+<td><%= blog.text %></td>
+</tr>
+<% end %>
+
+</table>
+
+</section>
+
+</div>
+<!--/#main-->
+
+
+
+<!--/#sub-->
+
+</div>
+<!--/#contents-->
+
+<footer>
+<small>Copyright&copy; <a href="index.html">INDIES BAND</a> All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+</footer>
+
+</div>
+
