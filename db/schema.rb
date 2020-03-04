@@ -13,35 +13,35 @@
 ActiveRecord::Schema.define(version: 20200302082316) do
 
   create_table "blogs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "title",      default: "", null: false
-    t.string   "text",       default: "", null: false
-    t.string   "googlemap"
-    t.string   "instagram"
-    t.integer  "user_id",                 null: false
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "title",                    default: "", null: false
+    t.text     "content",    limit: 65535,              null: false
+    t.text     "googlemap",  limit: 65535
+    t.text     "instagram",  limit: 65535
+    t.integer  "user_id",                               null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.index ["title"], name: "index_blogs_on_title", using: :btree
     t.index ["user_id"], name: "index_blogs_on_user_id", using: :btree
   end
 
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "title",      default: "", null: false
-    t.string   "text",       default: "", null: false
-    t.string   "googlemap"
-    t.string   "instagram"
-    t.integer  "user_id",                 null: false
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "title",                    default: "", null: false
+    t.text     "content",    limit: 65535,              null: false
+    t.text     "googlemap",  limit: 65535
+    t.text     "instagram",  limit: 65535
+    t.integer  "user_id",                               null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.index ["title"], name: "index_events_on_title", using: :btree
     t.index ["user_id"], name: "index_events_on_user_id", using: :btree
   end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "title",      default: "", null: false
-    t.string   "instagram"
-    t.integer  "user_id",                 null: false
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "title",                    default: "", null: false
+    t.text     "instagram",  limit: 65535
+    t.integer  "user_id",                               null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.index ["title"], name: "index_items_on_title", using: :btree
     t.index ["user_id"], name: "index_items_on_user_id", using: :btree
   end
