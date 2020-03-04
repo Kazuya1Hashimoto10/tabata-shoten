@@ -10,7 +10,7 @@
 <table class="ta1">
 <caption><a href="#"><%= event.title %></a></caption>
 <tr>
-<th><%= event.created_at %></th>
+<th><%= event.created_at.to_s(:datetime_jp) %></th>
 <td><%= event.text %></td>
 </tr>
 

@@ -10,7 +10,7 @@
 <table class="ta1">
 <caption><a href="#"><%= blog.title %></a></caption>
 <tr>
-<th><%= blog.created_at %></th>
+<th><%= blog.created_at.to_s(:datetime_jp) %></th>
 <td><%= blog.text %></td>
 </tr>
 
