@@ -8,13 +8,14 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class = "home">
+  <body>
+  <div id="container">
   <header>
   <h1 id="logo"><a href="index.html"><img src="/logo.png" alt="INDIES BAND"></a></h1>
   <!--PC用（901px以上端末）メニュー-->
   <nav id="menubar">
   <ul>
-  <li><a href="readme.html">ABOUT US</a></li>
+  <li><%= link_to "ABOUT", abouts_path %></li>
   <li><a href="news.html">CLOTHING</a></li>
   <li><%= link_to "BLOG", blogs_path %></li>
   <li><%= link_to "EVENT", events_path %></li>
@@ -28,6 +29,7 @@
   <li><a href="#"><img src="/icon_youtube.png" alt="YouTube"></a></li>
   </ul>
   </header>
+  </div>
     <%= yield %>
   <!--小さな端末用（900px以下端末）メニュー-->
   <nav id="menubar-s">

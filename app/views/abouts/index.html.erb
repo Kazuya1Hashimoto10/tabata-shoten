@@ -1,30 +1,25 @@
+
 <div id="contents">
 
 <div id="main">
 
-<section>
+<div class="clear">
 
-<h2 class="title">Blog<span>ブログ</span></h2>
+<aside class="fl w25"><img src="/photo1.png" alt=""></aside>
 
-<% @blogs.each do |blog| %>
-<table class="ta1">
-<caption><a href="#"><%= blog.title %></a></caption>
-<tr>
-<th><%= blog.created_at.to_s(:datetime_jp) %></th>
-<td><%= blog.content %></td>
-</tr>
-
-</table>
+<section class="fr w70">
+<h2>田端商店</h2>
+<% @abouts.each do |about| %>
+<h3><%= about.title %></h3>
+<p><%= simple_format about.content %></p>
 <% end %>
-
 </section>
 
 </div>
-<!--/#main-->
 
+</div>
 
-
-<!--/#sub-->
+</div>
 
 </div>
 <!--/#contents-->
@@ -33,6 +28,4 @@
 <small>Copyright&copy; <a href="index.html">INDIES BAND</a> All Rights Reserved.</small>
 <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
 </footer>
-
-</div>
 

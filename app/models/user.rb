@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :blogs
   has_many :events
   has_many :items
+  has_many :abouts
 end
