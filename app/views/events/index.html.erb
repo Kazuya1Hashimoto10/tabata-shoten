@@ -4,14 +4,14 @@
 
 <section>
 
-<h2 class="title">Blog<span>ブログ</span></h2>
+<h2 class="title">Event<span>イベント</span></h2>
 
-<% @blogs.each do |blog| %>
+<% @events.each do |event| %>
 <table class="ta1">
-<caption><a href="#"><%= blog.title %></a></caption>
+<caption><a href="#"><%= event.title %></a></caption>
 <tr>
-<th><%= blog.created_at %></th>
-<td><%= blog.text %></td>
+<th><%= event.created_at %></th>
+<td><%= event.text %></td>
 </tr>
 
 </table>
@@ -35,4 +35,3 @@
 </footer>
 
 </div>
-
