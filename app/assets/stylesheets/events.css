@@ -7,3 +7,12 @@
   text-decoration: none;
   margin-left: 25px;
 }
+
+.event-address{
+  font-size: 15px;
+  margin-left: 32px;
+}
+
+.event-instagram{
+  max-width: 50%;
+}

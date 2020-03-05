@@ -16,6 +16,16 @@
 
 <%= simple_format @blog.content ,class: "blog-content" %>
 
+<% if @blog.address && @blog.googlemap %>
+	<%= link_to @blog.address, @blog.googlemap ,class: "blog-address" %>
+<% end %>
+
+<% if @blog.instagram %>
+	<div class = "blog-instagram">
+	<%= simple_format @blog.instagram %>
+	</div>
+	<script async src="https://www.instagram.com/static/bundles/es6/EmbedSDK.js/2fe3a16f6aeb.js"></script>
+<% end %>
 
 
 </section>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200304083839) do
+ActiveRecord::Schema.define(version: 20200305061906) do
 
   create_table "abouts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "content",    limit: 65535, null: false
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20200304083839) do
     t.integer  "user_id",                               null: false
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
+    t.text     "address",    limit: 65535
     t.index ["title"], name: "index_blogs_on_title", using: :btree
     t.index ["user_id"], name: "index_blogs_on_user_id", using: :btree
   end
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 20200304083839) do
     t.integer  "user_id",                               null: false
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
+    t.text     "address",    limit: 65535
     t.index ["title"], name: "index_events_on_title", using: :btree
     t.index ["user_id"], name: "index_events_on_user_id", using: :btree
   end

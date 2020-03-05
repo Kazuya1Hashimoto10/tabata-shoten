@@ -16,7 +16,16 @@
 
 <%= simple_format @event.content ,class: "event-content" %>
 
+<% if @event.address && @event.googlemap %>
+	<%= link_to @event.address, @event.googlemap ,class: "blog-address" %>
+<% end %>
 
+<% if @event.instagram %>
+	<div class = "event-instagram">
+	<%= simple_format @event.instagram %>
+	</div>
+	<script async src="https://www.instagram.com/static/bundles/es6/EmbedSDK.js/2fe3a16f6aeb.js"></script>
+<% end %>
 
 </section>
 

@@ -18,7 +18,9 @@
 <div class="items">
 
 <% @items.each do |item| %>
+<div class = "item">
 <%= simple_format item.instagram %>
+</div>
 <script async src="https://www.instagram.com/static/bundles/es6/EmbedSDK.js/2fe3a16f6aeb.js"></script>
 <% end %>
 
