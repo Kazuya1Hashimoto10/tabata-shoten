@@ -16,10 +16,10 @@
 
 <% @events.each do |event| %>
 <table class="ta1">
-<caption><a href="#"><%= event.title %></a></caption>
+<caption><%= link_to event.title, event_path(event.id),class: "event-title" %></caption>
 <tr>
 <th><%= event.created_at.to_s(:datetime_jp) %></th>
-<td><%= event.content %></td>
+<td><%= event.content.truncate(53) %></td>
 </tr>
 
 </table>

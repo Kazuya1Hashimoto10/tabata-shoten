@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   root "top#index"
 
   resources :abouts, only: [:index]
-  resources :blogs, only: [:index]
-  resources :events, only: [:index]
+  resources :blogs, only: [:index, :show]
+  resources :events, only: [:index, :show]
   resources :items, only: [:index]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

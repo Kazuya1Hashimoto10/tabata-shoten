@@ -16,10 +16,10 @@
 
 <% @blogs.each do |blog| %>
 <table class="ta1">
-<caption><a href="#"><%= blog.title %></a></caption>
+<caption><%= link_to blog.title, blog_path(blog.id),class: "blog-title" %></caption>
 <tr>
 <th><%= blog.created_at.to_s(:datetime_jp) %></th>
-<td><%= blog.content %></td>
+<td><%= blog.content.truncate(53) %></td>
 </tr>
 
 </table>

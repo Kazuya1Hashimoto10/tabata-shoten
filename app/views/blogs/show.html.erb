@@ -1,4 +1,3 @@
-
 <body>
 
 <div id="container">
@@ -11,18 +10,13 @@
 
 <div id="main">
 
-
 <section>
 
-<h2 class="title">Items<span></span></h2>
-<div class="items">
+<h2 class="title"><%= @blog.title %><span><%= @blog.created_at.to_s(:datetime_jp) %></span></h2>
 
-<% @items.each do |item| %>
-<%= simple_format item.instagram %>
-<script async src="https://www.instagram.com/static/bundles/es6/EmbedSDK.js/2fe3a16f6aeb.js"></script>
-<% end %>
+<%= simple_format @blog.content ,class: "blog-content" %>
 
-</div>
+
 
 </section>
 
