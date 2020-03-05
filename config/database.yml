@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 10
   database: tabata_production
   username: tabata
   password: <%= ENV['TABATA_DATABASE_PASSWORD'] %>
