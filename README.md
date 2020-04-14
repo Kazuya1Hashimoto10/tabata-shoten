@@ -16,3 +16,89 @@
 * アジャイル型開発（スクラム）
 
 
+# DB
+
+## usersテーブル
+|Columm|Type|Options|
+|:------|:----|:-------|
+|nickname|string|null: :false|
+|e-mail|string|null: ：false|
+|number|string|null: :false|
+|encrypted_password|string|null: :false|
+|password_confirmation|string|null: :false|
+|admin|boolean||
+
+
+### index
+add_index: [:nickname, :e-mail, :admin]
+
+### アソシエーション
+has_many :abouts
+has_many :blogs
+has_many :events
+has_many :items
+
+
+## aboutsテーブル
+|Columm|Type|Options|
+|:------|:----|:-------|
+|content|text|null: :false|
+|user_id|integer|null: ：false|
+
+
+### index
+add_index: :user_id
+
+### アソシエーション
+belongs_to :user
+
+
+
+## blogsテーブル
+|Columm|Type|Options|
+|:------|:----|:-------|
+|title|string|null: :false|
+|content|text|null: :false|
+|googlemap|text|null: :false|
+|address|text|null: :false|
+|instagram|text|null: :false|
+|user_id|integer|null: ：false|
+
+### index
+add_index: [:user_id :title]
+
+### アソシエーション
+belongs_to :user
+
+
+
+## eventsテーブル
+|Columm|Type|Options|
+|:------|:----|:-------|
+|title|string|null: :false|
+|content|text|null: :false|
+|googlemap|text|null: :false|
+|address|text|null: :false|
+|instagram|text|null: :false|
+|user_id|integer|null: ：false|
+
+### index
+add_index: [:user_id :title]
+
+### アソシエーション
+belongs_to :user
+
+
+
+## itemsテーブル
+|Columm|Type|Options|
+|:------|:----|:-------|
+|title|string|null: :false|
+|instagram|text|null: :false|
+|user_id|integer|null: ：false|
+
+### index
+add_index: [:user_id :title]
+
+### アソシエーション
+belongs_to :user
